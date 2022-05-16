@@ -5,7 +5,8 @@ pipeline {
       parallel {
         stage('Buzz Build') {
           steps {
-            sh './scripts/run_all.sh'
+            sh '''sleep 5
+echo done.'''
           }
         }
 
