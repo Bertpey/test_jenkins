@@ -20,5 +20,11 @@ echo done.'''
       }
     }
 
+    stage('') {
+      steps {
+        input(message: 'test ?', ok: 'ok')
+      }
+    }
+
   }
 }
