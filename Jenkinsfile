@@ -19,11 +19,5 @@ pipeline {
       }
     }
 
-    stage('test shell') {
-      steps {
-        sh 'maven clean install'
-      }
-    }
-
   }
 }
