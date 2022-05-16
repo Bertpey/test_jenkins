@@ -26,6 +26,23 @@ echo done.'''
       }
     }
 
+    stage('test input') {
+      when {
+        equals expected: 'Fred', actual: "${PERSON}"
+      }
+      input {
+        message 'Should we continue?'
+        id 'Yes, we should.'
+        submitter 'alice,bob'
+        parameters {
+          string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I greet?')
+        }
+      }
+      steps {
+        echo "Hello, ${PERSON}, nice to meet you."
+      }
+    }
+
   }
   post {
     always {
