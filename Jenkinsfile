@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('clean install') {
+      steps {
+        build 'clean'
+      }
+    }
+
   }
 }
