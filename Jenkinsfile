@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('clean install') {
+    stage('message') {
       steps {
-        build 'clean'
+        echo 'bzee bzee'
       }
     }
 
